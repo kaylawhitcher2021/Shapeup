@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+
+	<meta charset="utf-8" />
+	<title>Shape Up!</title>
+	<link rel="icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheeet" href="styles/main.css">
+	<style>
+	/*Universal Selector*/
+
+   *{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+.clearfix::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+html{
+  background-image: url(images/paper\ \(1\).gif)
+}
+
+
+body {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    border:  5px solid steelblue;
+    box-shadow: 5px 5px 8px gray;
+  }
+h1{
+  font-size: 250%;
+  margin-left: 15px;
+  margin-top: 15px;
+  }
+header{
+  border-bottom: 5px solid steelblue;
+  background-image: linear-gradient(white, lightsteelblue);
+}
+header h2{
+  font-size: 250%;
+  color: steelblue;
+  font-style: italic;
+  text-shadow: 2px 2px 15px gray;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+header h3{
+  font-size: 150%;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+header img {
+  float: left;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+main{
+  clear: both;
+}
+/*Hortizontal Menu Bar Style*/
+
+#nav_menu ul{
+    list-style: none;
+    text-align: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 8px 0px;
+    background-color: #afeeee;
+    margin: 0px;
+}
+#nav_menu ul li{
+  display: inline;
+  padding: 5px 20px;
+  border-right: 3px solid black;
+}
+#nav_menu #last{
+  border-right: none;
+}
+
+#nav_menu  ul li a{
+  text-decoration: none;
+  font-weight: bold;
+}
+#nav_menu ul li a:hover{
+  color: red;
+}
+section h2, section h3, aside h2{
+   font-size: 150%;
+   margin-left: 15px;
+}
+/*Vertical Navigation list*/
+#nav_list ul{
+  list-style: none;
+
+} 
+#nav_list ul li{
+  border: 2px solid black;
+  width: 90%;
+}
+#nav_list ul li a{
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: lightsteelblue;
+  padding: .5em;
+  color: black;
+}
+#nav_list ul li a:hover, #nav_list ul li a:focus{
+  background-color: steelblue;
+  color: white;
+}
+ 
+section p{
+  margin: 15px
+}
+
+section blockquote{
+  margin-left: 50px;
+  margin-right: 50px;
+  font-size: 90%;
+  color: navy;
+  border-left: 3px solid maroon;
+  padding: 5px;
+  background-color: navajowhite;
+}
+section h2{
+  margin-left: 20px;
+  margin-right: 10px;
+  padding: 15px;
+  font-size: 250%;
+}
+section h3{
+  margin-left: 10px;
+  margin-right:10px;
+  padding-left: 10px;
+}
+section p {
+  margin-left: 20px;
+}
+section aside, ul, h2, li{
+  margin-left: 50px;
+  padding-bottom: 5px;
+}
+/* link colors section */
+/* unvisited link */
+ a:link {
+    color:  maroon;
+}
+  /* visited link */
+a:visited {
+    color:  maroon;
+}
+  
+  /* mouse over link */
+a:hover {
+    color: steelblue;
+}
+  
+  /* selected link */
+a:active {
+    color: steelblue;
+  }
+
+aside a {
+    font-weight: bold;
+  }
+/* link colors for aside */
+/* unsaved links */
+/* unvisited link */
+aside a:link {
+  color: steelblue;
+}
+/* visited link */
+aside  a:visited {
+  color: steelblue;
+}
+
+/* mouse over link */
+aside a:hover {
+  color: maroon;
+}
+/* selected link */
+aside a:active {
+  color: maroon;
+}
+aside a {
+  font-weight: bold;
+}
+.homesection{
+  width: 65%;
+  float: right;
+}
+.sidebar{
+  width: 33%;
+  padding-top: 20px;
+}
+.sidebar h2{
+  font-size: 160%;
+  color: maroon;
+}
+li {
+  margin-top: 5px;
+}
+footer{
+  background-color: steelblue;
+  margin-top: 10px;
+  clear: both;
+}
+footer p {
+  font-size: 75%;
+  text-align: center;
+  color: white;
+  padding: 25px;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+
+
+	</style>
+
+
+</head>
+
+<body>
+	<header class="clearfix">
+		<img src="images/shape_up_logo.png" alt="shape up logo image">
+		<h2>Shape Up!</h2>
+		<h3>Find the best fit for you</h3>
+  </header>
+  
+  <!-- Horizontal Navigation Menu -->
+  <nav id="nav_menu">
+    <ul>
+      <li><a href="cardio/index.html">Cardio</a></li>
+      <li><a href="diet/index.html">Diet</a></li>
+      <li><a href="strength/index.html">Strength</a></li>
+      <li id="last"><a href="stress/index.html">Stress</a></li>
+    </ul>
+  </nav>
+
+	<main>
+		<section class="homesection">
+  
+			<h1>Get ready to Shape Up!</h1>
+
+			<p>How many times have you started a new workout routine or diet? And how many times has it failed to give you the results you want? Now, with the help of this site, you can learn about the exercises and diet that work best for you. We offer personalized programs as well as access to several health and dieting tools. So don't wait! Get started looking and feeling better today.</p>	
+
+			<p>As fitness expert Amanda Russell said:</p>
+			<blockquote> Fitness is about so much more than exercise. It’s a catalyst for positive change, and it affects every aspect of your life.</blockquote>
+			
+			<h2>What we offer</h2>
+
+			<h3><a	href="strength/index.html">Build strong muscles</a></h3>
+			<p>Tired of being tired? Strength training can help you manage or lose weight and increase your metabolism to help you burn more calories. It can also increase bone density and reduce the risk of osteoporosis.</p>
+			
+			<h3><a	href="cardio/index.html">Get your heart rate up</a></h3>
+			<p>Want to lose weight? Cardiovascular exercise burns calories and improves overall health. It can reduce belly fat, promote brain growth, prevent stress, and help you focus.</p>
+			
+			<h3><a	href="stress/index.html"> Relax</a></h3>
+			<p>Stressed out? Stress can weaken the immune system and cause high blood pressure, fatigue, depression, anxiety, and even heart disease. Learn ways to manage and reduce stress.</p>
+			
+			<h3><a	href= "diet/index.html">Eat what's right for you</a></h3>
+			<p>Are you really what you eat? Lose weight, gain weight, or just feel great! Maintaining a healthy diet is probably the most important thing you can do to promote overall health.</p>
+  </section>
+  
+	<aside class="sidebar">
+    <nav id="nav_list">
+		<h2>Additional resources</h2>
+		<ul>
+			<li><a href="https://www.cdc.gov/physicalactivity/basics/pa-health/index.htm" Target="_blank">Physical activity and health </a></li>
+
+			<li><a href="https://stretch22.com/the-top-5-stretching-exercises-for-flexibility/" target="_blank">Stretching exercises</a></li>
+
+			<li><a href="https://www.nerdfitness.com/blog/strength-training-101-where-do-i-start/index.html" target="_blank">Strength training</a></li>
+
+			<li><a href="https://www.fyzical.com/lakewoodranch/blog/What-Is-a-Cardiovascular-Exercise" target="_blank">Cardiovascular training</a></li>
+			
+			<li><a href="https://www.alomoves.com/?utm_source=GoogleAdWords&gclid=CjwKCAiAsaOBBhA4EiwAo0_AnKoJzGnKd3mBeD8r_VKyisfjlGTtX2ljhR9VWP9qjG_yCoVBG0HsSBoCnlgQAvD_BwE" target="_blank">Yoga workout</a></li>
+    </ul>
+  </nav>
+	</aside>
+	</main>
+	<footer>
+		<p>&copy; 2020 Shape Up!</p>
+	</footer>
+</body>
+</html>
