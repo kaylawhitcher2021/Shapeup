@@ -4,11 +4,21 @@
 <head>
 	<!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
 
-	<meta charset="utf-8" />
+  <meta charset="utf-8" />
+  <!--viewport tag--->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Shape Up!</title>
 	<link rel="icon" href="images/favicon.ico">
 	<link rel="stylesheet" href="styles/normalize.css">
-	<link rel="stylesheeet" href="styles/main.css">
+  <link rel="stylesheeet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/slicknav.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+		<script type="text/javascript">
+    	$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobilemenu"});
+    	});
+    	</script>
 	<style>
 	/*Universal Selector*/
 
@@ -20,7 +30,7 @@
 .clearfix::after{
   content: "";
   clear: both;
-  display: table;
+  display: table; 
 }
 html{
   background-image: url(images/paper\ \(1\).gif)
@@ -39,7 +49,7 @@ body {
   }
 h1{
   font-size: 250%;
-  margin-left: 15px;
+  margin-left: 1em; /*to make it fluid left adn right so it moves */
   margin-top: 15px;
   }
 header{
@@ -61,14 +71,43 @@ header h3{
 }
 header img {
   float: left;
-  margin-left: 10px;
+  margin-left: .5em;
   margin-right: 20px;
 }
 main{
   clear: both;
 }
-/*Hortizontal Menu Bar Style*/
+/*Horizonal menu bar-w3 float and block style*/
+#nav_menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: steelblue;
+}
 
+#nav_menu ul li {
+  float: left;
+}
+#nav_menu #about{
+  float: right;
+}
+
+#nav_menu ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 1.5em; /*side padding*/
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+#nav_menu ul li a:hover {
+  background-color: lightsteelblue;
+  color: black;
+}
+
+/*Hortizontal Menu Bar Style - inline nav bar style 
 #nav_menu ul{
     list-style: none;
     text-align: center;
@@ -98,6 +137,8 @@ section h2, section h3, aside h2{
    font-size: 150%;
    margin-left: 15px;
 }
+*/
+
 /*Vertical Navigation list*/
 #nav_list ul{
   list-style: none;
@@ -120,14 +161,17 @@ section h2, section h3, aside h2{
   background-color: steelblue;
   color: white;
 }
+aside ul{
+  margin-left: 2em;
+}
  
 section p{
-  margin: 15px
+  margin: 1em;
 }
 
 section blockquote{
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 3em;
+  margin-right: 3em;
   font-size: 90%;
   color: navy;
   border-left: 3px solid maroon;
@@ -149,7 +193,8 @@ section p {
   margin-left: 20px;
 }
 section h2, section h3 aside h2{
-  margin-left: 50px;
+  margin-left: .5em;
+  font-size: 150%;
   padding-bottom: 5px;
 }
 /* link colors section */
@@ -209,8 +254,9 @@ aside a {
   font-size: 160%;
   color: maroon;
 }
-li {
+.sidebar li {
   margin-top: 5px;
+  margin-left: .5em;
 }
 footer{
   background-color: steelblue;
@@ -221,9 +267,25 @@ footer p {
   font-size: 75%;
   text-align: center;
   color: white;
-  padding: 25px;
+  padding: 2em;
   font-weight: bold;
   font-variant: small-caps;
+}
+
+#mobilemenu{
+  display: none;
+}
+@media only screen and (max-width: 600px){
+  .homesection{
+    float: none;
+    width: 100%;
+  }
+  .sidebar{
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 400px){
+
 }
 
 
@@ -241,12 +303,14 @@ footer p {
   </header>
   
   <!-- Horizontal Navigation Menu -->
+  <nav id="#mobilemenu"></nav>
   <nav id="nav_menu">
     <ul>
       <li><a href="cardio/index.html">Cardio</a></li>
       <li><a href="diet/index.html">Diet</a></li>
       <li><a href="strength/index.html">Strength</a></li>
       <li id="last"><a href="stress/index.html">Stress</a></li>
+      <li id="about"><a href="about/index.html">About</a></li>
     </ul>
   </nav>
 
